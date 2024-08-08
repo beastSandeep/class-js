@@ -48,8 +48,12 @@ c(sub(10, 20));
 function addArr(arr) {
   let sum = 0;
 
+  // for (let i = 0; i < arr.length; i++) {
+  //   const number = arr[i];
+  //   sum = sum + number;
+  // }
   for (const number of arr) {
-    sum = sum + number;
+    sum = sum + number; //  sum += number;
   }
 
   return sum;
@@ -57,3 +61,12 @@ function addArr(arr) {
 
 const array = [1, 2, 3, 4, 5];
 c(addArr(array));
+
+//
+//
+// Home Work
+function isEven() {
+  //return true if given number is even
+  //return false if given number is odd
+}
+isEven(5);
