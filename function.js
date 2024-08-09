@@ -62,11 +62,40 @@ function addArr(arr) {
 const array = [1, 2, 3, 4, 5];
 c(addArr(array));
 
-//
-//
-// Home Work
-function isEven() {
-  //return true if given number is even
-  //return false if given number is odd
+function isEven(num) {
+  // if (num % 2 === 0) {
+  //   //return true if given number is even
+  //   return true;
+  // } else {
+  //   //return false if given number is odd
+  //   return false;
+  // }
+
+  return num % 2 === 0;
 }
-isEven(5);
+c(isEven(1)); // false
+
+function findFristCharater(str) {
+  return str[0];
+}
+
+//findFristCharater("Sandeep") = str[0]
+
+c(findFristCharater("Sandeep"));
+
+// Task :-> we have to find a number is given array
+//and if it's present we can return their index otherwise return -1
+function findTarget(array, target) {
+  // i is index
+  for (const i in array) {
+    if (array[i] === target) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+c(findTarget([1, 3, 5, 6, 8, 9], 5)); // 2
+c(findTarget([1, 3, 5, 6, 8, 9], 9)); // 5
+c(findTarget([1, 3, 5, 6, 8, 9], 10)); // -1
