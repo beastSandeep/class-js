@@ -73,13 +73,20 @@ function isEven(num) {
 
   return num % 2 === 0;
 }
-c(isEven(1)); // false
+
+c(isEven(8)); // false
 
 function findFristCharater(str) {
-  return str[0];
+  const firstChar = str[0];
+  return firstChar;
 }
 
-//findFristCharater("Sandeep") = str[0]
+//return meanning findFristCharater("Sandeep") = str[0]
+
+findFristCharater("Sandeep"); // S
+findFristCharater("Arsh"); // A
+findFristCharater("Manni"); // M
+findFristCharater("Tanpreet"); // T
 
 c(findFristCharater("Sandeep"));
 
@@ -99,3 +106,20 @@ function findTarget(array, target) {
 c(findTarget([1, 3, 5, 6, 8, 9], 5)); // 2
 c(findTarget([1, 3, 5, 6, 8, 9], 9)); // 5
 c(findTarget([1, 3, 5, 6, 8, 9], 10)); // -1
+
+// We can write function in another ways also
+
+// 1. Function Declaration (basic)
+function fucnName(param) {
+  //code
+}
+
+// 2. Function Expression
+const fucnName = function (param) {
+  //code
+};
+
+// 3. Arrow Function (most used)
+const fucnName2 = (param) => {
+  //code
+};
