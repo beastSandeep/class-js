@@ -115,14 +115,14 @@ function fucnName(param) {
 }
 
 // 2. Function Expression
-const fucnName = function (param) {
-  //code
-};
+// const fucnName = function (param) {
+//   //code
+// };
 
 // 3. Arrow Function (most used)
-const fucnName2 = (param) => {
-  //code
-};
+// const fucnName2 = (param) => {
+//   //code
+// };
 
 const toCamelCase = (str) => {
   const arr = str.split(" ");
@@ -141,11 +141,22 @@ const toCamelCase = (str) => {
   return camelCased.join("");
 };
 
+function cc(str) {
+  return toCamelCase(str);
+}
+
 const camelCase = toCamelCase("hello kya hal hai"); // helloKyaHalHai
-console.log(camelCase);
+console.log(
+  cc(
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+  )
+);
 
 console.log(
   toCamelCase(
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
   )
 );
+
+const kuchBhi = toCamelCase("kuch bhi likh do");
+console.log(kuchBhi);
