@@ -123,3 +123,29 @@ const fucnName = function (param) {
 const fucnName2 = (param) => {
   //code
 };
+
+const toCamelCase = (str) => {
+  const arr = str.split(" ");
+  const camelCased = [];
+  for (const i in arr) {
+    if (i == 0) {
+      let word = arr[i].toLowerCase();
+      camelCased.push(word);
+    } else {
+      const wordArr = arr[i].toLowerCase().split("");
+      wordArr[0] = wordArr[0].toUpperCase();
+      camelCased.push(wordArr.join(""));
+    }
+  }
+
+  return camelCased.join("");
+};
+
+const camelCase = toCamelCase("hello kya hal hai"); // helloKyaHalHai
+console.log(camelCase);
+
+console.log(
+  toCamelCase(
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+  )
+);
