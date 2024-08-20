@@ -11,8 +11,8 @@ const obj = {
   arr: [1, 2, 3, 4],
   obj: { hello: "hello" },
 };
-// getting data . notation
-console.log(obj.age);
+// getting data (. notation)
+console.log(obj.age); // 78
 
 // setting data
 obj.age = 24;

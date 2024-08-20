@@ -146,11 +146,7 @@ function cc(str) {
 }
 
 const camelCase = toCamelCase("hello kya hal hai"); // helloKyaHalHai
-console.log(
-  cc(
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-  )
-);
+console.log(camelCase);
 
 console.log(
   toCamelCase(
