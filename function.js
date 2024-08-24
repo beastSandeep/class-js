@@ -1,11 +1,22 @@
+// ---------------------------- Day - 1 -------------------------
+
 // function declaration
 function shopping() {
   console.log("shopping started");
   console.log("shopping done");
 }
 
-// running / invoking a function
+// running / invoking / call a function
 shopping();
+
+// a and b are function parameters
+function addTwo(a, b) {
+  a++;
+  console.log(a + b);
+}
+
+// 5 and 12 are function arguments
+addTwo(5, 10);
 
 // when a function retruns something, we can store that thing while running a function and putting inside a variable.
 function twoPlusFour() {
@@ -17,8 +28,6 @@ function twoPlusFour() {
 let six = twoPlusFour();
 console.log(six);
 
-// we can accept data from outside
-// a, b are function parameters
 function add(a, b) {
   return a + b;
 }
@@ -31,19 +40,40 @@ function div(a, b) {
 function sub(a, b) {
   return a - b;
 }
-function c(a) {
-  console.log(a);
+function cl(value) {
+  console.log(value);
 }
 
 // we can consume func. inside func.
 // add(10, 20) is equals to 30
-// c(30)
+// cl(30)
 // first insided fucn. run then outer func. run
-// 10 and 20 are function argument
-c(add(10, 20));
-c(mult(10, 20));
-c(div(10, 20));
-c(sub(10, 20));
+
+cl(add(10, 20));
+cl(mult(10, 20));
+cl(div(10, 20));
+cl(sub(10, 20));
+
+// Exercise - low level
+
+function findFristCharater(str) {
+  const firstChar = str[0];
+  return firstChar;
+}
+
+findFristCharater("Sandeep"); // S
+findFristCharater("Arsh"); // A
+findFristCharater("Manni"); // M
+findFristCharater("Tanpreet"); // T
+cl(findFristCharater("Sandeep"));
+
+// ---------------------------- Day - 2 -------------------------
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+cl(isEven(8)); // true
 
 function addArr(arr) {
   let sum = 0;
@@ -59,53 +89,23 @@ function addArr(arr) {
   return sum;
 }
 
-const array = [1, 2, 3, 4, 5];
-c(addArr(array));
-
-function isEven(num) {
-  // if (num % 2 === 0) {
-  //   //return true if given number is even
-  //   return true;
-  // } else {
-  //   //return false if given number is odd
-  //   return false;
-  // }
-
-  return num % 2 === 0;
-}
-
-c(isEven(8)); // false
-
-function findFristCharater(str) {
-  const firstChar = str[0];
-  return firstChar;
-}
-
-//return meanning findFristCharater("Sandeep") = str[0]
-
-findFristCharater("Sandeep"); // S
-findFristCharater("Arsh"); // A
-findFristCharater("Manni"); // M
-findFristCharater("Tanpreet"); // T
-
-c(findFristCharater("Sandeep"));
+cl(addArr([1, 2, 3, 4, 5, 6])); // 21
 
 // Task :-> we have to find a number is given array
 //and if it's present we can return their index otherwise return -1
 function findTarget(array, target) {
-  // i is index
-  for (const i in array) {
-    if (array[i] === target) {
-      return i;
+  for (const index in array) {
+    if (array[index] === target) {
+      return index;
     }
   }
 
   return -1;
 }
 
-c(findTarget([1, 3, 5, 6, 8, 9], 5)); // 2
-c(findTarget([1, 3, 5, 6, 8, 9], 9)); // 5
-c(findTarget([1, 3, 5, 6, 8, 9], 10)); // -1
+cl(findTarget([1, 3, 5, 6, 8, 9], 5)); // 2
+cl(findTarget([1, 3, 5, 6, 8, 9], 9)); // 5
+cl(findTarget([1, 3, 5, 6, 8, 9], 10)); // -1
 
 // We can write function in another ways also
 
@@ -120,9 +120,9 @@ function fucnName(param) {
 // };
 
 // 3. Arrow Function (most used)
-// const fucnName2 = (param) => {
-//   //code
-// };
+const fucnName2 = (param) => {
+  //code
+};
 
 const toCamelCase = (str) => {
   const arr = str.split(" ");
@@ -141,18 +141,14 @@ const toCamelCase = (str) => {
   return camelCased.join("");
 };
 
-function cc(str) {
+function ccl(str) {
   return toCamelCase(str);
 }
 
 const camelCase = toCamelCase("hello kya hal hai"); // helloKyaHalHai
 console.log(camelCase);
 
-console.log(
-  toCamelCase(
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-  )
-);
+console.log(toCamelCase("Lorem Ipsum is simply"));
 
-const kuchBhi = toCamelCase("kuch bhi likh do");
+const kuchBhi = ccl("kuch bhi likh do");
 console.log(kuchBhi);

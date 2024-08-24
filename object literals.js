@@ -43,8 +43,8 @@ console.log(obj, obj2);
 
 // getting items inside objects
 console.log(obj);
-console.log(obj.arr[3]);
-console.log(obj.obj.hello);
+console.log(obj.arr[3]); // 4
+console.log(obj.obj.hello); // "Hello"
 
 // loops in object
 for (let key in obj) {
@@ -56,10 +56,10 @@ const tinyObj1 = { key1: "val1", key2: "val2" };
 const tinyObj2 = { key5: "val5", key6: "val6", key2: "val24" };
 
 const bigObj = {
-  ...tinyObj1,
-  ...tinyObj2,
-  ..."Sandeep",
-  ...[34, 35],
+  ...tinyObj1, // key1: "val1", key2: "val2"
+  ...tinyObj2, // key5: "val5", key6: "val6", key2: "val24"
+  ..."Sandeep", // 0:"S" , 1:"a" , 2:"n" , 3:"d"
+  ...[34, 35], // 0:34 , 1 : 35
   key57: "val57",
 };
 console.log(bigObj);
