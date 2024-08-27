@@ -152,3 +152,5 @@ console.log(toCamelCase("Lorem Ipsum is simply"));
 
 const kuchBhi = ccl("kuch bhi likh do");
 console.log(kuchBhi);
+
+// ---------------------------- Day - 3 -------------------------
