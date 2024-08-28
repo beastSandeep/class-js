@@ -154,3 +154,20 @@ const kuchBhi = ccl("kuch bhi likh do");
 console.log(kuchBhi);
 
 // ---------------------------- Day - 3 -------------------------
+
+function applyOperation(number, operation) {
+  return operation(number);
+}
+
+// Example usage:
+
+function square(x) {
+  return x * x;
+}
+
+function double(x) {
+  return x * 2;
+}
+
+let result1 = applyOperation(5, square); // Output: 25
+let result2 = applyOperation(3, double); // Output: 6
